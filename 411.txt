@@ -1,0 +1,149 @@
+#include <stdio.h>
+#include <windows.h>
+
+void main(void)  {
+    int input = 0, count = 0, play = 1, result = 0;
+
+    while(play)
+    {
+        switch(count)
+        {
+            case 0://Level 0
+                printf("1~50의 숫자 중 하나를 생각하십시오.\n");
+                printf("생각완료 = 1, 종료 = 0\n");
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    count = 1;
+                }
+                else{
+                    play = 0;
+                }
+                break;
+            case 1:
+                system("cls");
+                printf("다음의 숫자 중 생각하신 숫자가 있으십니까?\n");
+                printf("1\t3\t5\t7\t9\n");
+                printf("11\t13\t15\t17\t19\n");
+                printf("21\t23\t25\t27\t29\n");
+                printf("31\t33\t35\t37\t39\n");
+                printf("41\t43\t45\t47\t49\n");
+                printf("있음 = 1, 없음 = 0\n");
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    result = result+1;
+                    count = 2;
+                }
+                else{
+                    count = 2;
+                }
+                break;
+            case 2:
+                system("cls");
+                printf("다음의 숫자 중 생각하신 숫자가 있으십니까?\n");
+                printf("2\t3\t6\t7\n");
+                printf("10\t11\t14\t15\t18\t19\n");
+                printf("22\t23\t26\t27\t29\n");
+                printf("42\t43\t46\t47\t50\n");
+                printf("있음 = 1, 없음 = 0\n");  
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    result = result+2;
+                    count = 3;
+                }
+                else{
+                    count = 3;
+                }
+                break;
+            case 3:
+                system("cls");
+                printf("다음의 숫자 중 생각하신 숫자가 있으십니까?\n");
+                printf("4\t5\t6\t7\n");
+                printf("12\t13\t14\t15\t18\t19\n");
+                printf("20\t21\t22\t23\t28\t29\n");
+                printf("30\t31\t36\t37\t38\t39\n");
+                printf("44\t45\t46\t47\n");
+                printf("있음 = 1, 없음 = 0\n");  
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    result = result+4;
+                    count = 4;
+                }
+                else{
+                    count = 4;
+                }
+                break;
+            case 4:
+                system("cls");
+                printf("다음의 숫자 중 생각하신 숫자가 있으십니까?\n");
+                printf("8\t9\n");
+                printf("10\t11\t12\t13\t14\t15\n");
+                printf("24\t25\t26\t27\t28\t29\n");
+                printf("30\t31\n");
+                printf("40\t41\t42\t43\t44\t45\t46\t47\n");
+                printf("있음 = 1, 없음 = 0\n");  
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    result = result+8;
+                    count = 5;
+                }
+                else{
+                    count = 5;
+                }
+                break;
+            case 5:
+                system("cls");
+                printf("다음의 숫자 중 생각하신 숫자가 있으십니까?\n");
+                printf("16\t17\t18\t19\n");
+                printf("20\t21\t22\t23\t24\t25\t26\t27\t28\t29\n");
+                printf("30\t31\n");
+                printf("48\t49\t50\n");
+                printf("있음 = 1, 없음 = 0\n");  
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    result = result+16;
+                    count = 6;
+                }
+                else{
+                    count = 6;
+                }
+                break;
+            case 6:
+                system("cls");
+                printf("다음의 숫자 중 생각하신 숫자가 있으십니까?\n"); 
+                printf("32\t33\t34\t35\t36\t37\t38\t39\n");//
+                printf("40\t41\t42\t43\t44\t45\t46\t47\t48\t49\t50\n");
+                printf("있음 = 1, 없음 = 0\n");  
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    result = result+32;
+                    count = 7;
+                }
+                else{
+                    count = 7;
+                }
+                break;
+            case 7:
+                system("cls");
+                printf("당신이 생각하신 숫자는 %d 입니다.\n", result);
+                printf("계속하시겠습니까?\n");
+                printf("내 = 1, 아니요 = 0\n");
+                scanf("%d", &input);
+                if(input == 1)
+                {
+                    result = 0;
+                    count = 0;
+                }
+                else{
+                    play = 0;;
+                }
+                break;      
+        }       
+    }
+}
